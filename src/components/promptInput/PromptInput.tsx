@@ -1,11 +1,11 @@
 import React from 'react'
+import './PromptInput.css'
 
 const PromptInput = () => {
     const [text, setText] = React.useState('');
-  return (  
+  return (
     <form>
-
-    <input type="text" value=""/>
+    <input type="text" placeholder="Send message" className='PromptInput'/>
     </form>
   )
 }

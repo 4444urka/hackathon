@@ -8,10 +8,8 @@ interface BlankProps {
 
 const Blank: React.FC<BlankProps> = ({ children }) => {
   return (
-    <div className="center">
-      <div className="blank">
+    <div className="blank">
         {children}
-      </div>
     </div>
   );
 }

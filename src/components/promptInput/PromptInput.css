@@ -1,0 +1,16 @@
+.PromptInput {
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
+    width: 58vw;
+    max-width: 900px;
+    height: 5vh;
+    max-height: 700px;
+    border: 2px solid #ffdd2d
+}
+
+.PromptInput::placeholder {
+    font-size: 1em;
+    font-weight: 300;
+}
