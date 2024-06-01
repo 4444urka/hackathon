@@ -4,13 +4,12 @@
 
 .form {
     position: relative;
-    margin: 1em;
     align-items: center;
 }
 .PromptInput {
     display: block;
     outline: none;
-    height: 3.5em;
+    max-height: 10em;
     transition: border-color 0.3s ease-in-out;
     line-height: 3em;
     min-width: 400px;
@@ -21,7 +20,7 @@
     padding-left: 1.5em;
     padding-right: 2em;
     resize: vertical;
-    white-space: pre-wrap;
+    height: fit-content;
 }
 
 .PromptInput:hover, :focus {
