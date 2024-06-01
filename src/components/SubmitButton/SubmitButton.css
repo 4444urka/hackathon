@@ -1,14 +1,13 @@
 .submitButton {
   position: absolute;
-  top: 0.95em;
-  right: 1em;
-  height: 2.2em;
-  padding: 0 0;
+  padding: 0;
   transform: scale(1.4);
   border: none;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   transition: all 0.3s ease-in-out;
   background-color: rgba(0, 0, 0, 0);
+  margin-right: 15px;
+  margin-top: 5px;
 }
 
 .submitButton:hover {
