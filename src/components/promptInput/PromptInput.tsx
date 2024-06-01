@@ -16,7 +16,7 @@ const PromptInput: React.FC = () => {
     <form className="form" onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Send message"
+        placeholder="Введите сообщение"
         value={text}
         className="PromptInput"
         onChange={(e) => setText(e.target.value)}
