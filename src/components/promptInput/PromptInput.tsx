@@ -14,24 +14,20 @@ const PromptInput: React.FC = () => {
   const [text, setText] = useState<Question>({ query: "" });
   const [isBotResponding, setIsBotResponding] = useState<boolean>(false);
   const dispatch = useAppDispatch();
-
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (text.query.trim() !== "" && !isBotResponding) {
       setIsBotResponding(true);
-      await dispatch(addUserResponseToHistory(text.query));
       try {
+        await dispatch(addUserResponseToHistory(text.query));
         const response = await question(text);
-        // dispatch(addBotResponseToHistory(response));
-        console.log(text);
+        await dispatch(addBotResponseToHistory(response.query)); // Предполагаем, что response.query - это ответ бота
       } catch (error) {
         alert(error);
       } finally {
         setIsBotResponding(false);
       }
-      // await dispatch(addBotResponseToHistory(text));
       setText({ query: "" });
-      setIsBotResponding(false);
     }
   };
 
