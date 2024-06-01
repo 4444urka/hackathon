@@ -1,0 +1,19 @@
+.submitButton {
+    border-radius: 10px;
+    background-color: yellow;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+    border: none;
+    height: 30px;
+    padding: 10px;
+}
+
+.submitButton:hover {
+    color: rgba(0, 0, 0, 0.7);
+    scale: 1.03;
+    opacity: 75%;
+}
+
+.submitButton:active {
+    scale: 1.04;
+}
