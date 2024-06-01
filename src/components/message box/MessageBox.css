@@ -1,23 +1,37 @@
+.Bot, .User {
+
+}
+
 .Bot{
     display: flex;
-    width: 50%;
-    height: auto;
-    background-color: #ffffff;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 40em;
+    height: fit-content;
+    background-color: #ffdc2dbb;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    margin: 0.3em;
     border: 1px solid #eaecee;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-right: auto;
+    border-radius: 1em;
+    padding: 17px;
+    align-self: flex-start;
+}
+
+.Bot p, .Bot span, .User p, .User span {
+    display: inline; /* Используйте inline вместо block */
+    width: auto; /* Убедитесь, что ширина не занимает всю ширину родителя */
+    white-space: normal;
+    margin-bottom: 1em; /* Разрешите перенос текста на новую строку */
 }
 
 .User{
     display: flex;
     width: 50%;
-    height: auto;
+    height: fit-content;
     background-color: #ffffff;
-    border: 1px solid #eaecee;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-left: auto;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+    margin: 0.3em;  
+    border-radius: 1em;
+    padding: 15px;
+    align-self: flex-end    ;
 }
