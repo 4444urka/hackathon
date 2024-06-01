@@ -33,7 +33,7 @@ function App() {
               </>
             ))}
             <MessageBox mode="Bot">
-              <MarkdownConverter markdown="Привет!" />
+              <MarkdownConverter markdown="Привет! Я Тинькофф Q&A Бот и я готов ответить на любой твой вопрос!" />
             </MessageBox>
           </Blank>
           <div className='InputArea'>

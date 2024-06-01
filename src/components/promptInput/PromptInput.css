@@ -6,9 +6,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: end;
-    box-sizing: border-box;
-    margin-right: 0.5vw;
-    margin-left: 4.5vw;
+    box-sizing: border-box;;
 }
 
 .PromptInput {
@@ -24,7 +22,7 @@
     /*min-width: 400px;*/
     border-radius: 1em;
     font-size: 15px;
-    width: 47vw;
+    width: 43vw;
     border: 1px solid #00000079;
     padding-left: 1.5em;
     padding-right: 2em;
@@ -34,6 +32,7 @@
     overflow-y: auto;
     margin: 0;
     white-space: pre-wrap;
+    min-width: 350px;   
 }
 
 .PromptInput:hover:not(:disabled), :focus:not(:disabled) {
