@@ -7,6 +7,7 @@ import PromptInput from "./components/promptInput/PromptInput";
 import { useAppSelector } from "./hooks/redux-hooks";
 import MarkdownConverter from "./components/MarkdownConverter/MarkdownConverter";
 import ClearContextButton from "./components/ClearContextButton/ClearContextButton";
+import { FaTrashAlt } from "react-icons/fa";
 
 function App() {
   const messages = useAppSelector(
@@ -35,8 +36,10 @@ function App() {
               <MarkdownConverter markdown="Привет!" />
             </MessageBox>
           </Blank>
-          <ClearContextButton>Очистить историю</ClearContextButton>
-          <PromptInput />
+          <div className='InputArea'>
+            <PromptInput />
+            <ClearContextButton><FaTrashAlt /></ClearContextButton>
+          </div>
         </Center>
       </div>
     </>
