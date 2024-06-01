@@ -3,14 +3,22 @@
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
-    width: 58vw;
+    border: lightgray 1px solid;
+    width: 56.3vw;
     max-width: 900px;
-    height: 5vh;
+    height: 5.5vh;
     max-height: 700px;
-    border: 2px solid #ffdd2d
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1em;
+    transition: all 0.2s ease;
 }
 
-.PromptInput::placeholder {
-    font-size: 1em;
-    font-weight: 300;
+.PromptInput:hover {
+    border-color: #ffdd2d;
+}
+
+.PromptInput:focus {
+    border-color: #ffdd2d;
+    /*box-shadow: 0 0 3px 1.5px #ffdd2d;*/
 }
