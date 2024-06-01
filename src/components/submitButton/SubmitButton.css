@@ -1,10 +1,10 @@
 .submitButton {
   position: absolute;
-  top: 0.7em;
+  top: 0.95em;
   right: 1em;
   height: 2.2em;
   padding: 0 0;
-  transform: scale(1.2);
+  transform: scale(1.4);
   border: none;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;

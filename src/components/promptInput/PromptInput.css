@@ -10,15 +10,16 @@
 .PromptInput {
     display: block;
     outline: none;
-    width: 100%;
     height: 3.5em;
     transition: border-color 0.3s ease-in-out;
     line-height: 3em;
     min-width: 400px;
     border-radius: 1em;
+    font-size: 15px;
     width: 47vw;
     border: 1px solid;
-    padding: 0 2em;
+    padding-left: 1.5em;
+    padding-right: 2em;
 }
 
 .PromptInput:hover, :focus {

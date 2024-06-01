@@ -8,7 +8,7 @@ interface MessageBoxProps {
 const MessageBox: React.FC<MessageBoxProps> = ({ mode }) => {
     const [text, setText] = React.useState('');
     return (
-        <div className='{mode}'>
+        <div className={mode}>
             Это сообщение от {mode}
         </div>
     )
