@@ -13,6 +13,7 @@ function App() {
     (state) => state.responseHistory
   ).responseHistory;
   console.log(messages);
+
   return (
     <>
       <Header />
@@ -33,8 +34,8 @@ function App() {
             <MessageBox mode="Bot">
               <MarkdownConverter markdown="Привет!" />
             </MessageBox>
-            <ClearContextButton>Удалить историю</ClearContextButton>
           </Blank>
+          <ClearContextButton>Очистить историю</ClearContextButton>
           <PromptInput />
         </Center>
       </div>
