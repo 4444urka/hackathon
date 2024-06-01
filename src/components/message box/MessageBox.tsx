@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import './MessageBox.css'
 
 interface MessageBoxProps {
-    mode: string;
+    mode: "Bot" | "User";
+    children: ReactNode
 }
 
-const MessageBox: React.FC<MessageBoxProps> = ({ mode }) => {
-    const [text, setText] = React.useState('');
+const MessageBox: React.FC<MessageBoxProps> = ({ mode, children }) => {
     return (
         <div className={mode}>
-            Это сообщение от {mode}
+            {children}
         </div>
     )
 }

@@ -1,6 +1,6 @@
 .blank {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     background-color: white;
     padding: 15px;
@@ -8,6 +8,9 @@
     border-radius: 15px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
     width: 47vw;
+    min-width: 400px;
     max-width: 900px;
-    height: 80vh;
+    height: 82vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
