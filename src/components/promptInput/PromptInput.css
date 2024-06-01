@@ -1,24 +1,26 @@
+* {
+    box-sizing: border-box;
+  }
+
+.form {
+    position: relative;
+    margin: 1em;
+    align-items: center;
+}
 .PromptInput {
-    display: flex;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
-    border: lightgray 1px solid;
-    width: 56.3vw;
-    max-width: 900px;
-    height: 5.5vh;
-    max-height: 700px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 1em;
-    transition: all 0.2s ease;
+    display: block;
+    outline: none;
+    width: 100%;
+    height: 3.5em;
+    transition: border-color 0.3s ease-in-out;
+    line-height: 3em;
+    min-width: 400px;
+    border-radius: 1em;
+    width: 47vw;
+    border: 1px solid;
+    padding: 0 2em;
 }
 
-.PromptInput:hover {
+.PromptInput:hover, :focus {
     border-color: #ffdd2d;
-}
-
-.PromptInput:focus {
-    border-color: #ffdd2d;
-    /*box-shadow: 0 0 3px 1.5px #ffdd2d;*/
 }

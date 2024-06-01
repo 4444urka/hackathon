@@ -1,24 +1,20 @@
 .center {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 .blank {
-    display: flex;
-    background-color: white;
-    padding: 40px;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    border-radius: 15px;
-    border: lightgray 1px solid;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
-    width: 53vw;
-    max-width: 900px;
-    height: 70vh;
-    max-height: 700px;
-}
-
-.blank:hover {
-    border-color: #ffdd2d;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 40px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
+  width: 47vw;
+  min-width: 400px;
+  height: 80vh;
 }

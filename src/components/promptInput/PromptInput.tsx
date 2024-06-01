@@ -1,13 +1,29 @@
-import React from 'react'
-import './PromptInput.css'
+import React, { useState } from "react";
+import "./PromptInput.css";
+import SubmitButton from "../submitButton/SubmitButton";
 
-const PromptInput = () => {
-    const [text, setText] = React.useState('');
+const PromptInput: React.FC = () => {
+  const [text, setText] = useState<string>("");
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (text.trim() !== "") {
+      alert(text);
+    }
+  };
+
   return (
-    <form>
-    <input type="text" placeholder="Send message" className='PromptInput'/>
+    <form className="form" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        placeholder="Send message"
+        value={text}
+        className="PromptInput"
+        onChange={(e) => setText(e.target.value)}
+      />
+      <SubmitButton disabled={!text.trim()} />
     </form>
-  )
-}
+  );
+};
 
-export default PromptInput
+export default PromptInput;

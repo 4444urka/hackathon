@@ -1,9 +1,14 @@
+import React from "react";
 import { IoSend } from "react-icons/io5";
 import "./SubmitButton.css";
 
-const SubmitButton = () => {
+interface SubmitButtonProps {
+  disabled: boolean;
+}
+
+const SubmitButton: React.FC<SubmitButtonProps> = ({ disabled }) => {
   return (
-    <button type="submit" className="submitButton">
+    <button type="submit" className="submitButton" disabled={disabled}>
       <IoSend />
     </button>
   );
