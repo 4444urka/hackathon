@@ -1,4 +1,5 @@
 .clearContextButton {
+    outline: none;
     width: 3.5vw;
     padding: 10px;
     border-radius: 1em;
@@ -9,7 +10,13 @@
     margin-left: 0.5vw;
 }
 
-.clearContextButton:hover {
+.clearContextButton:hover,
+.clearContextButton:focus {
     border-color: #ffdd2d;
     color: #ffdd2d;
+}
+
+.clearContextButton:active {
+    border-color: #00000079;
+    color: #00000079;
 }

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import "./PromptInput.css";
-import SubmitButton from "../SubmitButton/SubmitButton";
-import { useAppDispatch, useAppSelector } from "../../hooks/redux-hooks";
+import { question } from "../../api/responses";
+import { useAppDispatch } from "../../hooks/redux-hooks";
 import {
   addBotResponseToHistory,
-  addUserResponseToHistory,
+  addUserResponseToHistory
 } from "../../store/slices/responseHistorySlice";
 import { Question } from "../../types/questionResponse";
-import { question } from "../../api/responses";
 import Spinner from "../Spinner/Spinner";
+import SubmitButton from "../SubmitButton/SubmitButton";
+import "./PromptInput.css";
 
 const PromptInput: React.FC = () => {
   const [text, setText] = useState<Question>({ query: "" });
@@ -22,6 +22,7 @@ const PromptInput: React.FC = () => {
       await dispatch(addUserResponseToHistory(text.query));
       try {
         const response = await question(text);
+        // dispatch(addBotResponseToHistory(response));
         console.log(text);
       } catch (error) {
         alert(error);
