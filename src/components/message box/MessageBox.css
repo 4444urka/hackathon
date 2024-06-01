@@ -2,7 +2,8 @@
     display: block;
     flex-direction: column;
     width: fit-content;
-    max-width: 40em;
+    max-width: 80%;
+    font-size: 1em;
     height: fit-content;
     background-color: #ffdc2dbb;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -11,6 +12,7 @@
     border-radius: 1em;
     padding: 17px;
     align-self: flex-start;
+    word-wrap: break-word;
 }
 
 .Bot p, .Bot span, .User p, .User span {

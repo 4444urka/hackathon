@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./PromptInput.css";
-import SubmitButton from "../submitButton/SubmitButton";
+import SubmitButton from "../SubmitButton/SubmitButton";
 import { useAppDispatch } from "../../hooks/redux-hooks";
-import { addUserResponseToHistory } from "../../store/slices/responseHistorySlice";
+import { addBotResponseToHistory, addUserResponseToHistory } from "../../store/slices/responseHistorySlice";
 
 const PromptInput: React.FC = () => {
   const [text, setText] = useState<string>("");
@@ -12,6 +12,7 @@ const PromptInput: React.FC = () => {
     event.preventDefault();
     if (text.trim() !== "") {
       dispatch(addUserResponseToHistory(text));
+      dispatch(addBotResponseToHistory(text));
       setText("");
     }
   };
