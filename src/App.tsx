@@ -66,10 +66,16 @@ function App() {
             </MessageBox>
             <MessageBox mode="User">Как оформить кредит?</MessageBox> */}
             {/*<MessageBox mode='User'/>*/}
-            {[...messages].reverse().map((message) => (
-        <MessageBox mode="User">{message}</MessageBox>
-      ))}
-          </Blank>
+              {[...messages].reverse().map((message, index) => (
+    <>
+        {message[0] === "User" ? (
+            <MessageBox mode="User">{message[1]}</MessageBox>
+        ) : (
+            <MessageBox mode="Bot">{message[1]}</MessageBox>
+        )}
+    </>
+))}
+            </Blank>
           <PromptInput />
         </Center>
       </div>

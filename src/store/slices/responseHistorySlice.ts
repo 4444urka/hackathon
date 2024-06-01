@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface ResponseHistoryState {
-  responseHistory: string[];
+  responseHistory: string[][];
 }
 
 const initialState: ResponseHistoryState = {
@@ -12,8 +12,11 @@ const responseHistorySlice = createSlice({
   name: "responseHistory",
   initialState,
   reducers: {
-    addResponseToHistory: (state, action: PayloadAction<string>) => {
-      state.responseHistory.push(action.payload);
+    addUserResponseToHistory: (state, action: PayloadAction<string>) => {
+      state.responseHistory.push(["User", action.payload]);
+    },
+    addBotResponseToHistory: (state, action: PayloadAction<string>) => {
+      state.responseHistory.push(["Bot", action.payload]);
     },
     clearHistory: (state) => {
       state.responseHistory = [];
@@ -21,5 +24,5 @@ const responseHistorySlice = createSlice({
   },
 });
 
-export const { addResponseToHistory, clearHistory } = responseHistorySlice.actions;
+export const { addUserResponseToHistory, addBotResponseToHistory ,clearHistory } = responseHistorySlice.actions;
 export default responseHistorySlice.reducer;

@@ -1,9 +1,5 @@
-.Bot, .User {
-
-}
-
 .Bot{
-    display: flex;
+    display: block;
     flex-direction: column;
     width: fit-content;
     max-width: 40em;
@@ -25,7 +21,7 @@
 }
 
 .User{
-    display: flex;
+    display: block;
     width: fit-content;
     height: fit-content;
     background-color: #ffffff;
@@ -33,5 +29,7 @@
     margin: 0.3em;  
     border-radius: 1em;
     padding: 15px;
-    align-self: flex-end    ;
+    max-width: 40em;
+    align-self: flex-end;
+    word-wrap: break-word; /* Добавляем это свойство */
 }
