@@ -19,3 +19,7 @@
 .submitButton:active {
   scale: 1.04;
 }
+
+.submitButton:focus {
+  outline: none;
+}

@@ -20,6 +20,8 @@
     border: 1px solid #00000079;;
     padding-left: 1.5em;
     padding-right: 2em;
+    resize: vertical;
+    white-space: pre-wrap;
 }
 
 .PromptInput:hover, :focus {
