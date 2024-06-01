@@ -3,8 +3,9 @@
     flex-direction: column;
     width: fit-content;
     max-width: 80%;
-    font-size: 1em;
+    font-size: 15px;
     height: fit-content;
+    align-content: center;
     background-color: #ffdc2dbb;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     margin: 0.3em;
@@ -28,10 +29,10 @@
     height: fit-content;
     background-color: #ffffff;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
-    margin: 0.3em;  
+    margin: 0.3em;
+    max-width: 80%;
     border-radius: 1em;
     padding: 15px;
-    max-width: 40em;
     align-self: flex-end;
     word-wrap: break-word; /* Добавляем это свойство */
 }
