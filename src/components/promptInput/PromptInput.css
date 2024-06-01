@@ -34,13 +34,14 @@
     white-space: pre-wrap;
 }
 
-.PromptInput:hover, :focus {
+.PromptInput:hover:not(:disabled), :focus:not(:disabled) {
     border-color: #ffdd2d;
 }
 
 .PromptInput::-webkit-scrollbar {
     width: 0;
 }
+
 
 .PromptInput > .submitButton {
     justify-content: flex-end;
