@@ -1,14 +1,16 @@
 import React, { useState } from "react";
+import { IoSend } from "react-icons/io5";
+
 import { question } from "../../api/responses";
 import { useAppDispatch } from "../../hooks/redux-hooks";
 import {
   addBotResponseToHistory,
-  addUserResponseToHistory
+  addUserResponseToHistory,
 } from "../../store/slices/responseHistorySlice";
 import { Question } from "../../types/questionResponse";
 import Spinner from "../Spinner/Spinner";
 import SubmitButton from "../SubmitButton/SubmitButton";
-import "./PromptInput.css";
+import "./PromptInput.scss";
 
 const PromptInput: React.FC = () => {
   const [text, setText] = useState<Question>({ query: "" });
@@ -20,8 +22,8 @@ const PromptInput: React.FC = () => {
       setIsBotResponding(true);
       try {
         await dispatch(addUserResponseToHistory(text.query));
-        const response = await question(text);
-        await dispatch(addBotResponseToHistory(response.query)); // Предполагаем, что response.query - это ответ бота
+        // const response = await question(text);
+        await dispatch(addBotResponseToHistory(text.query)); // Предполагаем, что response.query - это ответ бота
       } catch (error) {
         alert(error);
       } finally {
@@ -50,7 +52,9 @@ const PromptInput: React.FC = () => {
         disabled={isBotResponding}
       />
       {!isBotResponding ? (
-        <SubmitButton disabled={!text.query.trim() || isBotResponding} />
+        <SubmitButton disabled={!text.query.trim() || isBotResponding}>
+          <IoSend />
+        </SubmitButton>
       ) : (
         <Spinner />
       )}

@@ -1,3 +1,5 @@
+@import '../../index.scss';
+
 * {
     box-sizing: border-box;
   }
@@ -32,11 +34,11 @@
     overflow-y: auto;
     margin: 0;
     white-space: pre-wrap;
-    min-width: 350px;   
+    min-width: 300px;   
 }
 
 .PromptInput:hover:not(:disabled), :focus:not(:disabled) {
-    border-color: #ffdd2d;
+    border-color: $main-color;
 }
 
 .PromptInput::-webkit-scrollbar {

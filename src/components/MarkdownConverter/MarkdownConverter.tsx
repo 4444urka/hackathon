@@ -1,25 +1,26 @@
-import React from 'react';
-import Markdown from 'react-markdown';
+import React from "react";
+import Markdown from "react-markdown";
 
 interface MarkdownRendererProps {
-  markdown: string | Promise<string>;
+  children: string | Promise<string>;
 }
 
-const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ markdown }) => {
+const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ children }) => {
   // Если markdown является Promise, отображаем загрузку или индикатор
-  if (markdown instanceof Promise) {
+  if (children instanceof Promise) {
     return <div>Загрузка...</div>;
   }
 
   function replaceUrlsWithLinks(text: string): string {
-    const urlRegex = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/g;
+    const urlRegex =
+      /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/g;
     return text.replace(urlRegex, (url) => {
-        return `[${url}](${url})`;
+      return `[${url}](${url})`;
     });
-}
+  }
 
   // Заменяем символы \n на <br /> для корректного отображения переносов строк
-  let formattedMarkdown = markdown.replace(/\\n/g, '\n');
+  let formattedMarkdown = children.replace(/\\n/g, "\n");
   formattedMarkdown = replaceUrlsWithLinks(formattedMarkdown);
   console.log(formattedMarkdown);
 

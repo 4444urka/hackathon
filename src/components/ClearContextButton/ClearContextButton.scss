@@ -1,4 +1,7 @@
+@import '../../index.scss';
+
 .clearContextButton {
+    outline: none;
     width: 3.5vw;
     padding: 10px;
     border-radius: 1em;
@@ -12,8 +15,8 @@
 
 .clearContextButton:hover,
 .clearContextButton:focus {
-    border-color: #ffdd2d;
-    color: #ffdd2d;
+    border-color: $main-color;
+    color: $main-color;
 }
 
 .clearContextButton:active {

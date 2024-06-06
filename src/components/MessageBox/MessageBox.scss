@@ -1,3 +1,6 @@
+@import '../../index.scss';
+
+
 .Bot{
     display: block;
     flex-direction: column;
@@ -6,7 +9,7 @@
     font-size: 15px;
     height: fit-content;
     align-content: center;
-    background-color: #ffdc2dbb;
+    background-color: $main-color;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     margin: 0.3em;
     border: 1px solid #eaecee;

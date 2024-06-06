@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import './MessageBox.css'
+import './MessageBox.scss'
 
 interface MessageBoxProps {
     mode: "Bot" | "User";

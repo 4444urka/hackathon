@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import "./ClearContextButton.css";
+import "./ClearContextButton.scss";
 import { useDispatch } from "react-redux";
 import { clearHistory } from "../../store/slices/responseHistorySlice";
 import { FaTrashAlt } from "react-icons/fa";

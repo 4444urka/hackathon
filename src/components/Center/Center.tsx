@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import './Center.css'
+import './Center.scss'
 
 
 interface BlankProps {
